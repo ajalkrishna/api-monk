@@ -1,10 +1,8 @@
 <nav class="navbar navbar-expand-md p-3">
     <div class="container">
         {{!-- <a class="navbar-brand" href="#">Navbar</a> --}}
-        <LinkTo @route="index" class="nav-link brand_name">API MONK <img
-                src="https://cdn-icons-png.flaticon.com/512/103/103093.png" alt="no-image" width="40px">
-                <img
-                src="public\assets\images\103093.png" alt="no-image" width="40px">
+        <LinkTo @route="index" class="nav-link brand_name">API MONK <img src="/assets/images/103093.png" alt="no-image"
+                width="40px">
         </LinkTo>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +17,7 @@
                     <LinkTo @route="index" class="nav-link">About</LinkTo>
                 </li>
                 <li class="nav-item">
-                    <LinkTo @route="index" class="nav-link">Our Collections</LinkTo>
+                    <LinkTo @route="collections" class="nav-link">Our Collections</LinkTo>
                 </li>
                 <li class="nav-item">
                     <LinkTo @route="index" class="nav-link">Contribute</LinkTo>
