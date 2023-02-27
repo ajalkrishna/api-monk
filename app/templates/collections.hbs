@@ -1,10 +1,13 @@
 <div class="container collections mt-3 pb-3">
+    {{!-- <div class="search_api">
+        <Input @type="text" id="api_search" @value = {{this.searchKeyword}}/>
+        <button type="button" {{on 'click' this.searchApi}}>dummy btn</button>
+    </div> --}}
     <div class="row row-cols-1 row-cols-lg-2 g-3">
-        {{#each @model as |api|}}
+        {{#each this.apiData as |api|}}
         <div class="col">
             <ApiTemplate @api={{api}} />
         </div>
-
         {{/each}}
     </div>
 

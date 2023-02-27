@@ -1,19 +1,33 @@
 {{!-- template-lint-disable no-invalid-interactive --}}
-<div class="card" {{on 'click' (fn this.gotoApi @api.url)}}>
+<div class="card container">
     <div class="card-body p-1 m-0">
         <div class="row align-items-center">
-            <div class="col-3">
-                <img src="/assets/images/103093.png" alt="invalid-image" width="50px" class="d-flex mx-auto">
+            <div class="col-2 col-lg-2" {{on 'click' (fn this.gotoApi @api.url)}}>
+                <img src="/assets/images/103093.png" alt="invalid-image" class="d-flex mx-auto w-100">
 
             </div>
-            <div class="col-7">
+            <div class="col-8 col-lg-7" {{on 'click' (fn this.gotoApi @api.url)}}>
                 <div class="api_data">
                     <h6>{{@api.endpoint}}</h6>
                     <p class="lead">{{@api.source}}</p>
                 </div>
             </div>
+            <div class="col-2 col-lg-2 copy_link" {{on 'click' (fn this.copyToClipboard @api.url)}} data-bs-toggle="modal" data-bs-target="#copyConfirmModal">
+                <img src="assets\images\link.png" class="d-block mx-auto" alt="no-image">
+            </div>
             
         </div>
     </div>
+</div>
 
+<div class="modal fade" id="copyConfirmModal" tabindex="-1" >
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        {{!-- <Input @type="text" id="copied_url" class="form-control" disabled @value={{this.copiedUrl}}/> --}}
+        <p class="text-center text-primary">API end-point has copied successfully</p>
+        <button type="button" class="btn-close border border-danger d-block mx-auto mt-2 w-25 p-2 bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
 </div>

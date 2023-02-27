@@ -19,40 +19,86 @@
     min-height: 100vh;
     position: relative;
 }
-.main_page footer{
+
+.main_page footer {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
 }
 
-.main_page #navbarNav .nav-link{
+.main_page #navbarNav .nav-link {
     color: black;
     font-weight: 100;
     min-width: 6rem;
     text-align: center;
 }
-.main_page #navbarNav .nav-link:hover{
+
+.main_page #navbarNav .nav-link:hover {
     border-bottom: 1px solid white;
     transition: all 0.4s ease-in;
 }
 
-.main_page .navbar .brand_name{
+.main_page .navbar .brand_name {
     color: rgb(1, 1, 159);
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2rem;
 }
 
-.main_page .auth_btn{
+.main_page .auth_btn {
     border: 1px solid rgb(1, 1, 141);
     background-color: transparent;
     /* border-radius: 30px; */
     font-size: 0.9rem;
     padding: 0.1rem 1rem;
 }
-.main_page .auth_btn:hover{
+
+.main_page .auth_btn:hover {
     background-color: rgb(1, 1, 141);
     color: white;
     /* transform: scale(1.); */
     /* transition: all 0.2s ease-in; */
+}
+
+.main_page .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    animation: rotateLogo 10s infinite;
+}
+
+.main_page .brand_name img {
+    animation: rotateLogo 6s infinite;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .main_page .center_nav {
+        padding-top: 1rem;
+        width: 100%;
+        margin: auto;
+    }
+
+    .main_page .brand_name img {
+        display: none;
+    }
+
+    .main_page #navbarNav .nav-link {
+        color: black;
+        font-weight: 100;
+        text-align: start;
+    }
+
+    .main_page .auth_btn {
+        display: none;
+    }
 }

@@ -8,10 +8,40 @@
 .collections .card:hover{
     cursor: pointer;
     border-bottom: 1px solid rgba(123, 121, 121, 0.288);
+    color: rgb(30, 4, 204);
 
 }
 
 .collections .card .card-body .api_data{
     line-height: 1;
     padding: 0;
+}
+.collections .card .copy_link{
+    border-radius: 50px;
+    border: 1px dotted rgb(29, 26, 26);
+}
+.collections .card .copy_link:hover{
+    background-color: rgb(202, 222, 238);
+}
+
+#copyConfirmModal .modal-content{
+    border-radius: 0;
+    padding: 2rem;
+}
+#copyConfirmModal .form-control{
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+.collections .card .copy_link img{
+    width: 50%;
+}
+@media only screen and (max-width: 870px){
+    .collections .card .copy_link img{
+        width: 80%;
+    }
+
+    .collections .card .card-body .api_data p{
+        font-size: 1rem;
+    }
 }
